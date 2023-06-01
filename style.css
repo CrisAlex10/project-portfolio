@@ -1,0 +1,113 @@
+body {
+	background: darkgray;
+	font-family: Consolas;
+	display: grid;
+}
+
+body .main h1{
+	font-size: 24px;
+	border-bottom: 3px solid darkblue;
+	margin-left: 8px;
+}
+
+.profile-pic {
+	width: auto;
+	height: auto;
+	border: 1px solid white;
+}
+
+.info {
+	width: auto;
+	height: auto;
+	border: 1px solid white;
+	margin-top: 8px;
+}
+
+.main{
+	width: auto;
+	height: auto;
+}
+
+.main div{
+	width: auto;
+	height: auto;
+	margin: 0px;
+}
+
+.main div p{
+	margin: 8px;
+	font-size: 18px;
+}
+
+body .profile-pic img{
+	border-radius: 50%;
+	width: auto;
+}
+
+#me {
+	width: auto;
+	height: 175px;
+}
+
+.center-profile{
+	text-align: center;
+	color: darkblue;
+	display: inline-flex;
+	align-items: center;
+}
+
+#contacto{
+	text-align: center; 
+	border: 2px solid darkblue;
+	margin: 0; 
+	padding: 0;
+	background-color: darkblue;
+	color: darkgray;
+	width: auto;
+}
+
+#in-contact{
+	display: inline-flex;
+	align-items: center;
+	font-size: 22px;
+	margin-left: 1rem;
+}
+
+.align{
+	margin-right: 10px;
+}
+
+.item1 { grid-area: profile-pic; }
+.item2 { grid-area: info; }
+.item3 { grid-area: main; }
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'profile-pic main main main main main'
+    'info main main main main main'
+    'info main main main main main';
+  gap: 5px;
+  background-color: darkblue;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: powderblue;
+  padding: 5px 0;
+  font-size: 30px;
+}
+
+@media (max-width: 980px){
+	.grid-container{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.main{
+		width: auto;
+		height: auto;
+		margin-top: 8px;
+	}
+}
